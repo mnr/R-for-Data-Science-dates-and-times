@@ -20,12 +20,21 @@ sampleYearData <- seq.Date(from = as.Date("1970-01-01"),
 sampleYearData[sampleYearData > as.Date("2001-01-01")]
 
 # what about mixed dates and times?
-sampleYearTimeData <- seq.POSIXt(from = as.POSIXct("1970-01-01 12:23"), 
+sampleYearPOSIXctData <- seq.POSIXt(from = as.POSIXct("1970-01-01 12:23"), 
                                to = Sys.time(),
                                by = "years")
 
-sampleYearData[sampleYearData > sampleYearTimeData]
+sampleYearData[sampleYearData > sampleYearPOSIXctData]
 # Incompatible methods ("Ops.Date", "Ops.POSIXt") for ">"
+
+
+# but this works
+sampleYearPOSIXltData <- seq.POSIXt(from = as.POSIXlt("1970-01-01 12:23"), 
+                                    to = Sys.time(),
+                                    by = "years")
+
+sampleYearPOSIXltData[sampleYearPOSIXltData > sampleYearTimeData]
+
 
 # documentation
 ?Ops.Date

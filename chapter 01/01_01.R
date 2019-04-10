@@ -1,7 +1,7 @@
 # chapter 01_01
 
-year_month_data <- read.csv("~/R-for-Data-Science-dates-and-times/chapter 01/year_month_data", 
-                            sep="", 
+# grab some data
+year_month_data <- read.csv("chapter 01/year_month_data.csv", 
                             stringsAsFactors=FALSE)
 
 #you might try this...

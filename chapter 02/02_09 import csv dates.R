@@ -2,6 +2,10 @@
 # Learn how to use colClasses = Date for POSIXct and POSIXlt.
 
 year_month_data <- read.csv("chapter 02/year_month_day_data.csv", 
+                            sep = ",",
+                            stringsAsFactors=FALSE)
+
+year_month_data <- read.csv("chapter 02/year_month_day_data.csv", 
                             colClasses = c("Date","integer"),
                             sep = ",",
                             stringsAsFactors=FALSE)
@@ -10,6 +14,10 @@ year_month_data <- read.csv("chapter 02/year_month_day_data.csv",
                               colClasses = c("POSIXct","integer"),
                               stringsAsFactors=FALSE)
 
+year_month_data <- read.csv("chapter 01/year_month_data.csv", 
+                            colClasses = c("Date","integer"),
+                            sep = ",",
+                            stringsAsFactors=FALSE)
 
 # or...use the readr package
 # install.packages("readr")

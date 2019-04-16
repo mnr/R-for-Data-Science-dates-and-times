@@ -27,4 +27,5 @@ lubridate_daysin3months("2012-02-01")
 # periods - 
 class(months(3)) # returns a lubridate period
 months(3) # retrieving days or months from this is meaningless
-
+class(today())
+class(today() + months(3))

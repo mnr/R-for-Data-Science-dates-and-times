@@ -13,7 +13,7 @@ get_fy(Sholay_released) # fiscal year Sholay was released
 get_fy(Sholay_released, offset_period = 2) # fiscal year + 2 years
 
 # get boundaries
-get_boundary(Sholay_released)
+get_boundary()
 get_boundary(Sholay_released, offset_type = "month", offset_period = -3) # 7/1/1974
 get_boundary(Sholay_released, bus_period = "CY") # business period = calendar year
 get_boundary(Sholay_released, bus_period = "M") # business period = month

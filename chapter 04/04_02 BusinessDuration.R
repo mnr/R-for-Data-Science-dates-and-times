@@ -4,6 +4,7 @@ library(BusinessDuration)
 # business duration is like difftime (or Lubridate interval)
 # but accounts for Business open and close
 # and weekends and holidays
+# BusinessDuration returns a numeric
 
 # Oktoberfest in Munich 2019 
 # begins at 1:45 AM on Saturday, September 21 PST
@@ -26,3 +27,14 @@ businessDuration(startdate = Oktoberfest_starts,
 
 # compare with total hours
 difftime(Oktoberfest_ends, Oktoberfest_starts, units = "hour") # 376 hours
+
+# what about holidays?
+Oktoberfest_holiday <- as.Date(c("2019-09-22", "2019-09-23"))
+
+businessDuration(startdate = Oktoberfest_starts,
+                 enddate = Oktoberfest_ends,
+                 starttime =  "08:00:00",
+                 endtime =  "17:00:00",
+                 unit = "hour",
+                 holidaylist = Oktoberfest_holiday
+)

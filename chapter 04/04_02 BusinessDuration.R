@@ -29,7 +29,7 @@ businessDuration(startdate = Oktoberfest_starts,
 difftime(Oktoberfest_ends, Oktoberfest_starts, units = "hour") # 376 hours
 
 # what about holidays?
-Oktoberfest_holiday <- as.Date(c("2019-09-22", "2019-09-23"))
+Oktoberfest_holiday <- as.Date(c("2019-09-25", "2019-09-26"))
 
 businessDuration(startdate = Oktoberfest_starts,
                  enddate = Oktoberfest_ends,
@@ -37,4 +37,17 @@ businessDuration(startdate = Oktoberfest_starts,
                  endtime =  "17:00:00",
                  unit = "hour",
                  holidaylist = Oktoberfest_holiday
+)
+
+# weekends
+Okt_weekends <- c("Saturday", "Sunday") # this is the default
+Okt_weekends <- NULL # No weekends
+Okt_weekends <- "Wednesday"
+
+businessDuration(startdate = Oktoberfest_starts,
+                 enddate = Oktoberfest_ends,
+                 starttime =  "08:00:00",
+                 endtime =  "17:00:00",
+                 unit = "hour",
+                 weekendlist = Okt_weekends
 )

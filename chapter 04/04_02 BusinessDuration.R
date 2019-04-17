@@ -13,10 +13,10 @@ library(BusinessDuration)
 
 Oktoberfest_starts <- as.POSIXct("September 21, 2019 10:45 am", 
            "%B %d, %Y %I:%M %p", 
-           tz = "ETC/GMT+1")
+           tz = "Europe/Berlin")
 Oktoberfest_ends <- as.POSIXct("October 6, 2019 11:30 pm",
                                "%B %d, %Y %I:%M %p", 
-                               tz = "ETC/GMT+1")
+                               tz = "Europe/Berlin")
 
 
 businessDuration(startdate = Oktoberfest_starts,

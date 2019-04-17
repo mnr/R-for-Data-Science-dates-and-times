@@ -7,14 +7,16 @@ library(BusinessDuration)
 # BusinessDuration returns a numeric
 
 # Oktoberfest in Munich 2019 
-# begins at 1:45 AM on Saturday, September 21 PST
-# and ends on Sunday, October 6 PST
-Oktoberfest_starts <- as.POSIXct("September 21, 2019 1:45 am", 
+# will begin at 10:45 AM on Saturday, September 21
+# and ends on Sunday, October 6
+# All times are in Central European Time.
+
+Oktoberfest_starts <- as.POSIXct("September 21, 2019 10:45 am", 
            "%B %d, %Y %I:%M %p", 
-           tz = "America/Los_Angeles")
-Oktoberfest_ends <- as.POSIXct("October 6, 2019 6:00 pm",
+           tz = "ETC/GMT+1")
+Oktoberfest_ends <- as.POSIXct("October 6, 2019 11:30 pm",
                                "%B %d, %Y %I:%M %p", 
-                               tz = "America/Los_Angeles")
+                               tz = "ETC/GMT+1")
 
 
 businessDuration(startdate = Oktoberfest_starts,

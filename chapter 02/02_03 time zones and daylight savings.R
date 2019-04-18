@@ -33,7 +33,7 @@ HoliSunrise <- as.POSIXlt("Monday, March 10, 2020 5:49 +0530",
                           format = "%A, %B %d, %Y %H:%M %z")
 # time is correct for local timezone, not India
 # so how to set india time and time zone
-strftime(HoliSunrise, format = "%A, %B %d, %Y %H:%M %Z", tz = "America/Los_Angeles")
+strftime(HoliSunrise, format = "%A, %B %d, %Y %H:%M", tz = "America/Los_Angeles")
 # should work, but doesn't
 
-# assume frustration. Wait for lubridate!
+# assume frustration. look ahead to chapter on lubridate!

@@ -1,6 +1,10 @@
 # dealing with timezones
 
+# trying to find the right time zone name
 OlsonNames()
+OlsonNames()[grep("India", OlsonNames())]
+OlsonNames()[grep("Calcutta", OlsonNames())]
+OlsonNames()[grep("Asia", OlsonNames())]
 
 Sys.timezone() # returns local time zone
 
@@ -23,3 +27,13 @@ HoliSunrise <- as.POSIXlt("Monday, March 10, 2020 5:49",
                           format = "%A, %B %d, %Y %H:%M",
                           tz = "Asia/Calcutta")
 HoliSunrise$isdst
+
+# fixing time zones in base R
+HoliSunrise <- as.POSIXlt("Monday, March 10, 2020 5:49 +0530",
+                          format = "%A, %B %d, %Y %H:%M %z")
+# time is correct for local timezone, not India
+# so how to set india time and time zone
+strftime(HoliSunrise, format = "%A, %B %d, %Y %H:%M %Z", tz = "America/Los_Angeles")
+# should work, but doesn't
+
+# assume frustration. Wait for lubridate!

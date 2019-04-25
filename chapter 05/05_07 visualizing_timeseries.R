@@ -14,10 +14,9 @@ zooweather_order <- as.POSIXct(paste(weatherData[ , 1],weatherData[,2]),
 newZoo <- zoo(x = zooweather_data, order.by = zooweather_order)
 
 
-
 # barplot.zoo and plot, and plot.zoo  -------------------------------------------------------------
 barplot(newZoo$Air_Temp)
-plot(newZoo$Air_Temp[1:3000], newZoo$Barometric_Press[1:3000])
+plot(newZoo$Air_Temp)
 plot.zoo(newZoo, screens = c(1,2,3,4,5,6,7,8))
 
 # plot, lines, and points -------------------------------------------------
@@ -27,9 +26,11 @@ lines(newZoo$Wind_Gust, col = "green")
 
 # ggplot and tidyverse ----------------------------------------------------
 
+# install.packages("tidyverse")
+# install.packages("tibbletime")
 library(tidyverse)
-library(lubridate)
 library(tibbletime)
+library(lubridate)
 
   read_table2("https://raw.githubusercontent.com/lyndadotcom/LPO_weatherdata/master/Environmental_Data_Deep_Moor_2012.txt") %>% 
   unite(datetime, date,time) %>%

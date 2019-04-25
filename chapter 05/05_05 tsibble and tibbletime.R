@@ -8,6 +8,7 @@ install.packages("tidyverse")
 library(tsibble)
 library(tibbletime)
 library(tidyverse)
+library(lubridate)
 
 # grab weather data - notice I'm using tidyverse instead of base R
 tt_weatherData <- read_table2("https://raw.githubusercontent.com/lyndadotcom/LPO_weatherdata/master/Environmental_Data_Deep_Moor_2012.txt") %>% 

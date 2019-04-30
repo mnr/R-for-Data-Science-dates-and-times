@@ -19,7 +19,7 @@ first_of_month(MaryShellyFrankenstein)
 end_of_month(MaryShellyFrankenstein)
 
 month(MaryShellyFrankenstein)
-[month.name]month(MaryShellyFrankenstein)
+month.name[month(MaryShellyFrankenstein)]
 
 
 timegrid(from = as.POSIXct("2100-03-23 12:34:01"), 

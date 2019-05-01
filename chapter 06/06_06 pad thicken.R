@@ -20,7 +20,12 @@ someTimeData <- someTimeData[-3, ]
 
 # pad ---------------------------------------------------------------------
 someTimeData <- pad(someTimeData) # pad replaces the missing timestamp, but not the variable
+fill_by_function(someTimeData, observedValue)
 
 # thicken -----------------------------------------------------------------
+someTimeData # notice each row has a 10 day date stamp
 someTimeData <- thicken(someTimeData, interval = "month")
-center_interval(someTimeData$timestamp)
+someTimeData
+someTimeData$center <- center_interval(someTimeData$timestamp)
+someTimeData <- someTimeData[ , c(1,4,2,3)]
+View(someTimeData)

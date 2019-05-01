@@ -9,7 +9,7 @@ timeString <- "12:23:34"
 
 anHMStime <- parse_hms(timeString)
 
-class(anHMStime) # stored as our old friend difftime
+class(anHMStime) # inherited from difftime
 
 parse_hm(timeString) # no need for minutes
 
@@ -20,9 +20,10 @@ as.hms(as.POSIXct(paste("2019-01-01",timeString), "%Y-%m-%d %H:%M:%S", tz = Sys.
 whatDoTheseNumbersBecome <- c(1,60,61,370,19345)
 
 data.frame("Input" = whatDoTheseNumbersBecome, 
-           "converted to" = hms(whatDoTheseNumbersBecome),
+           "converted_to" = hms(whatDoTheseNumbersBecome),
            "rounded_60" = round_hms(whatDoTheseNumbersBecome, secs = 60),
-           "rounded_40" = round_hms(whatDoTheseNumbersBecome, secs = 40),
-           "truncated_60" = trunc_hms(whatDoTheseNumbersBecome, secs = 60))
+           "rounded_15" = round_hms(whatDoTheseNumbersBecome, secs = 15),
+           "truncated_60" = trunc_hms(whatDoTheseNumbersBecome, secs = 60),
+           "truncated_15" = trunc_hms(whatDoTheseNumbersBecome, secs = 15))
 
            

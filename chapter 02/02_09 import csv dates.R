@@ -1,19 +1,22 @@
 # import csv files with dates intact. 
 # Learn how to use colClasses = Date for POSIXct and POSIXlt.
 
+# dates as character
 year_month_data <- read.csv("chapter 02/year_month_day_data.csv", 
                             sep = ",",
                             stringsAsFactors=FALSE)
 
+# dates as Date
 year_month_data <- read.csv("chapter 02/year_month_day_data.csv", 
                             colClasses = c("Date","integer"),
                             sep = ",",
                             stringsAsFactors=FALSE)
-
+# dates as POSIXct
 year_month_data <- read.csv("chapter 02/year_month_day_data.csv", 
                               colClasses = c("POSIXct","integer"),
                               stringsAsFactors=FALSE)
 
+# date isn't formatted in a way it can understand
 year_month_data <- read.csv("chapter 01/year_month_data.csv", 
                             colClasses = c("Date","integer"),
                             sep = ",",

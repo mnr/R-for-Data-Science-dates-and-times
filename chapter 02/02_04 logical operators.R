@@ -14,26 +14,22 @@ theEpoch == todayDate
 # how would you use this?
 
 sampleYearData <- seq.Date(from = as.Date("1970-01-01"), 
-         to = Sys.Date(),
-         by = "years")
+                           to = Sys.Date(),
+                           by = "years")
 
 sampleYearData[sampleYearData > as.Date("2001-01-01")]
 
 # what about mixed dates and times?
 sampleYearPOSIXctData <- seq.POSIXt(from = as.POSIXct("1970-01-01 12:23"), 
-                               to = Sys.time(),
-                               by = "years")
+                                    to = Sys.time(),
+                                    by = "years")
 
-sampleYearData[sampleYearData > sampleYearPOSIXctData]
+sampleYearPOSIXctData > as.Date("2001-01-01")
 # Incompatible methods ("Ops.Date", "Ops.POSIXt") for ">"
 
 
 # but this works
-sampleYearPOSIXltData <- seq.POSIXt(from = as.POSIXlt("1970-01-01 12:23"), 
-                                    to = Sys.time(),
-                                    by = "years")
-
-sampleYearPOSIXltData[sampleYearPOSIXltData > sampleYearTimeData]
+sampleYearPOSIXctData > as.POSIXlt("2001-01-01")
 
 
 # documentation

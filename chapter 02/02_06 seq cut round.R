@@ -1,16 +1,16 @@
 # seq, round, trunc, cut
 
 # seq.date & POSIX
-# produces an error until to=2001/02/28
+# produces an error until to=20019/02/28
 DaysOfFeb <- seq.Date(from = as.Date("2019/02/01"),
-                        to = as.Date("2019/02/31"),
-                        by = "day")
+                      to = as.Date("2019/02/31"),
+                      by = "day")
 
 TimesToday <- seq.POSIXt(from = as.POSIXct("2001/02/01 00:00:00"),
-                          to = as.POSIXct("2001/02/02 00:00:00"),
-                          by = "hour")
+                         to = as.POSIXct("2001/02/02 00:00:00"),
+                         by = "hour")
 # by = has many options. # of seconds, difftime, sec/min/hour...
-# by = "- 3 sec" or "+ 5 hours"
+# by = "3 sec" or "5 hours"
 
 TimesToday <- seq.POSIXt(from = as.POSIXct("2001/02/01 00:00:00"),
                          by = "hour",
@@ -41,7 +41,7 @@ cut(DaysOfFeb, 3, labels = c("Low", "Medium", "High"))
 cut(DaysOfFeb, "week")
 # practical example. Attach the starting sunday to each date by week
 data.frame(DaysOfFeb, 
-           cut(DaysOfFeb, "week", start.on.monday = FALSE))
+           "Week Made" = cut(DaysOfFeb, "week", start.on.monday = FALSE))
 
 # ...and dates
 cut(timedObservations$TimesToday, 4, labels = c("Pre-Dawn", "Morning", "Afternoon", "Evening"))

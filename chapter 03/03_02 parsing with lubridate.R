@@ -10,8 +10,8 @@ now() # equivalent to Sys.time()
 
 # and it does so with standard classes of Date and POSIXct
 # as_date and as.Date produce the same class
-class(as_date("1881/10/25"))
-class(as.Date("1881/10/25"))
+class(as_date("1881/10/25")) # from lubridate
+class(as.Date("1881/10/25")) # from base R
 
 # simpler strptime
 strptime("2014-07-13 16:00:00 -0300", "%Y-%m-%d %H:%M:%S %z") # time zone is messed up

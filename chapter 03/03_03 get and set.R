@@ -10,8 +10,9 @@ year(PabloPicassoBday) + 3
 
 # adding three years with Base R
 PPB_lt <- as.POSIXlt(PabloPicassoBday)
+PPB_lt$year # year is offset from 1900
 PPB_lt$year <- PPB_lt$year + 3
-PPB_lt$year + 3 # year is offset from 1900. so PPB_lt$year is -19. +3 = -16
+PPB_lt$year + 3 # PPB_lt$year is -19 +3 = -16
 PPB_lt
 
 

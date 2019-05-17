@@ -25,10 +25,10 @@ businessDuration(startdate = Oktoberfest_starts,
                  endtime =  "17:00:00",
                  unit = "hour"
                  )
-# equals 99 business hours
+# equals 90 business hours
 
 # compare with total hours
-difftime(Oktoberfest_ends, Oktoberfest_starts, units = "hour") # 376 hours
+difftime(Oktoberfest_ends, Oktoberfest_starts, units = "hour") # 372 hours
 
 # what about holidays?
 Oktoberfest_holiday <- as.Date(c("2019-09-25", "2019-09-26"))

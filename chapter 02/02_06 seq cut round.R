@@ -38,7 +38,7 @@ trunc(Sys.time(), "hour")
 
 # cut.date & cut.POSIX
 cut(DaysOfFeb, 3, labels = c("Low", "Medium", "High"))
-cut(DaysOfFeb, "week")
+cut(DaysOfFeb, "week") # sec min hour day DSTday week month quarter year
 # practical example. Attach the starting sunday to each date by week
 data.frame(DaysOfFeb, 
            "Week Made" = cut(DaysOfFeb, "week", start.on.monday = FALSE))

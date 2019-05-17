@@ -3,6 +3,7 @@
 # values to work with
 USA_Independence <- as.Date("1776/07/04")
 TodayDate <- Sys.Date()
+US_age <- TodayDate - USA_Independence
 TodayTime_ct <- Sys.time()
 TodayTime_lt <- as.POSIXlt(Sys.time())
 

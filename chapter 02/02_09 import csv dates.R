@@ -28,7 +28,6 @@ library(readr)
 
 rr_year_month_day_data <- read_csv("chapter 02/year_month_day_data.csv", 
                                              col_types = cols(YearMonth = col_datetime(format = "%Y-%m-%d %H:%M:%S")))
-                                             View(year_month_day_data)
 
 year_month_data <- read_csv("chapter 01/year_month_data.csv", 
                             col_types = cols(YearMonth = col_date(format = "%Y-%m")))

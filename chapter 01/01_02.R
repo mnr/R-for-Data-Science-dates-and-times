@@ -1,4 +1,6 @@
 # the date object
+#affiliate: https://linkedin-learning.pxf.io/rdatesHowStored2
+
 
 HAL_online <- as.Date("1992-01-12")
 

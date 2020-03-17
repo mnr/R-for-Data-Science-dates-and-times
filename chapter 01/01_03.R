@@ -1,4 +1,6 @@
 # when to use the different date classes?
+# affiliate: https://linkedin-learning.pxf.io/rdatesChooseTool
+
 
 # first rule - if you aren't using times, use the Date class
 # it's simpler

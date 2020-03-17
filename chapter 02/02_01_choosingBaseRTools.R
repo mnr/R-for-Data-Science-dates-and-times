@@ -1,3 +1,5 @@
+# affiliate: https://linkedin-learning.pxf.io/rdatesDateClass
+
 LochNessMonsterDiscovered <- as.Date("1993-05-02")
 
 class(LochNessMonsterDiscovered) # returns class of Date

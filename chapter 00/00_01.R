@@ -1,5 +1,7 @@
 # exmples for LinkedIn Learning R for Data Science: Dates and Times
 # Chapter 00_01
+# affiliate: https://linkedin-learning.pxf.io/rdatesHowstored
+
 
 myDate <- as.Date("March 14, 2015", format = "%B %d, %Y") # produces Date
 str(myDate) # is Date

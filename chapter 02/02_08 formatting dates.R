@@ -1,4 +1,5 @@
 # formatting dates for output
+# affiliate: https://linkedin-learning.pxf.io/rdatesFormatting
 
 TimeNow <- Sys.time()
 

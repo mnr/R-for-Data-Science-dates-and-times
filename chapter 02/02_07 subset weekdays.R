@@ -1,4 +1,5 @@
 # weekdays(), months(), days() or quarters()
+# affiliate: https://linkedin-learning.pxf.io/rdatesExtractParts
 
 # create a vector to play with
 hours_2001 <- seq.POSIXt(from = as.POSIXct("2001/02/01 00:00:00"),

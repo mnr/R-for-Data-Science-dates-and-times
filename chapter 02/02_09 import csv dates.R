@@ -1,5 +1,6 @@
 # import csv files with dates intact. 
 # Learn how to use colClasses = Date for POSIXct and POSIXlt.
+# affiliate: https://linkedin-learning.pxf.io/rdatesImportCSV
 
 # dates as character
 year_month_data <- read.csv("chapter 02/year_month_day_data.csv", 

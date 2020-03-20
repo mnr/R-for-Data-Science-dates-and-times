@@ -1,4 +1,5 @@
 # seq, round, trunc, cut
+# affiliate: https://linkedin-learning.pxf.io/rdatesCutSeq
 
 # seq.date & POSIX
 # produces an error until to=20019/02/28

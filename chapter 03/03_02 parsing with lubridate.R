@@ -1,4 +1,5 @@
 # parsing dates with lubridate
+# affiliate: https://linkedin-learning.pxf.io/rdatesLubridateParsing
 
 # be sure lubridate 
 install.packages("lubridate")

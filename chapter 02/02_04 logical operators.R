@@ -1,4 +1,5 @@
 # logical operators with dates
+# affiliate: https://linkedin-learning.pxf.io/rdatesCompare
 
 theEpoch <- as.Date("1970-01-01")
 todayDate <- Sys.Date()

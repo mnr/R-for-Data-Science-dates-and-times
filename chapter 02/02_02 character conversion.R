@@ -1,3 +1,5 @@
+# https://linkedin-learning.pxf.io/rdatesStringFormat
+
 InternationalProgrammerDay <- "January 7, 2020"
 
 as.Date("January 7, 2020") # character string is not in a standard unambiguous format

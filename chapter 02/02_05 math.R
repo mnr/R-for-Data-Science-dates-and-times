@@ -1,4 +1,5 @@
 # difftime and date math
+# affiliate: https://linkedin-learning.pxf.io/rdatesMath
 
 # values to work with
 USA_Independence <- as.Date("1776/07/04")

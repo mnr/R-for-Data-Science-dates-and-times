@@ -1,4 +1,5 @@
 # dealing with timezones
+# Affiliate: https://linkedin-learning.pxf.io/rdatesDSTTZ
 
 # trying to find the right time zone name
 OlsonNames()

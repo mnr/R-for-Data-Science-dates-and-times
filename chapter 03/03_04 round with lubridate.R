@@ -1,4 +1,5 @@
 # round, floor, ceiling
+# affiliate: https://linkedin-learning.pxf.io/rdatesLubridateRound
 
 library(lubridate)
 

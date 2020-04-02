@@ -1,4 +1,5 @@
 # math with Lubridate durations
+# affiliate: https://linkedin-learning.pxf.io/rdateLubridateMathDurations
 
 library(lubridate)
 

@@ -1,0 +1,108 @@
+R Programming - Dates and Times
+========================================================
+author: Mark Niemann-Ross
+date: September, 2020
+autosize: true
+## How Dates and Times are Stored in R
+Supplemental Slides for [R Programming in Data Science: Dates and Times](https://linkedin-learning.pxf.io/R_datesandtimes)
+![LinkedIn Learning - R for Data Science: Dates and Times](images/lil_courseThumbnail.jpg)
+
+
+R has several ways to store dates and times
+========================================================
+
+- Date
+- POSIXct
+- POSIXlt
+- chron
+- difftime
+
+
+
+Let's focus on just three of them
+========================================================
+
+- Date
+- POSIXct
+- POSIXlt
+
+
+
+R's Date Class
+========================================================
+
+- stores dates - but not times
+- stores dates as the number of seconds from January 1, 1970
+- negative values are for dates before January 1, 1970
+
+Here's an example:
+
+```{r}
+HAL_online <- as.Date("1992-01-12")
+
+HAL_online
+
+as.numeric(HAL_online) # produces DAYS, not SECONDS
+```
+
+8046 is the number of days between January 1, 1970 and January 12, 1992
+
+R's Date Class
+=================================
+`as.Date()` will convert multiple dates
+
+```{r}
+HAL_online <- as.Date(c("1992-01-12", "1997-01-12"))
+
+HAL_online
+
+HAL_online[2]
+```
+
+R's POSIXct and POSIXlt
+===========================================
+POSIX stands for _Portable Operating Systems Interface_
+
+POSIXlt and POSIXct support Date and Time
+
+R's POSIXct and POSIXlt
+===========================================
+**POSIXct**
+
+Stores date and time as seconds since January 1, 1970
+
+```{r}
+myPOSIXct <- as.POSIXct("March 14, 2015 at 9:26", format = "%B %d, %Y at %H:%M")
+```
+Number of seconds between January 1, 1970 midnight and March 14, 2015 at 9:26 am
+```{r}
+as.integer(myPOSIXct)
+```
+
+
+***
+
+**POSIXlt**
+
+Stores date and time as a list of elements
+
+```{r}
+myPOSIXlt <- as.POSIXlt("March 14, 2015 at 9:26", format = "%B %d, %Y at %H:%M")
+```
+POSIXlt is a list. Here is years since 1900
+```{r}
+myPOSIXlt[1, "year"] 
+```
+Here is months after 1st month of the year
+```{r}
+myPOSIXlt[1, "mon"] 
+
+```
+
+
+
+See more at LinkedIn Learning
+==========================
+type: section
+[R Programming in Data Science: Dates and Times](https://linkedin-learning.pxf.io/R_datesandtimes)
+![LinkedIn Learning - R for Data Science: Dates and Times](images/lil_courseThumbnail.jpg)

@@ -1,4 +1,4 @@
-# exmples for LinkedIn Learning R for Data Science: Dates and Times
+# examples for LinkedIn Learning R for Data Science: Dates and Times
 # Chapter 00_01
 # affiliate: https://linkedin-learning.pxf.io/rdatesHowstored
 
